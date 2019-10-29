@@ -1,5 +1,12 @@
 .slide-wrapper{
   position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 95px;
+}
+
+#headerSlider.owl-carousel .owl-stage-outer{
+  overflow: visible;
 }
 
 .slide-item{
@@ -46,7 +53,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: -16px 25px 65px rgba(11,12,17,0.2)
+  box-shadow: -16px 25px 25px rgba(11,12,17,0.2)
 }
 
 .slide-item__img--bg-1{
@@ -57,10 +64,11 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  // width: 81px;
+  width: 140px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 9
 }
 .slide-controls__left{
   margin-left: 18px;
