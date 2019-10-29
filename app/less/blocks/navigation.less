@@ -1,35 +1,77 @@
-.navigation-wrapper{
+.navigation-wrapper {
   display: flex;
-  height: 128px;
+  flex-direction: column;
   align-items: center;
+
+  @media (min-width: 1254px) {
+    flex-direction: row;
+    height: 128px;
+    // align-items: center;
+  }
 }
 
-.nav-logo-wrapper{
-  margin-right: 190px;
+.nav-logo-wrapper {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+
+  @media (min-width: 1254px) {
+    margin-right: 190px;
+    padding: 0;
+    bottom: 0;
+    width: auto;
+  }
 }
 
-.navigation{
+.navigation {
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
   list-style-type: none;
   margin: 0;
   padding: 0;
   font-family: "League-Spartan", sans-serif;
   font-weight: 700;
 
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+  }
 
-}
-.navigation__item{
-  margin-right: 40px;
-  &:last-child{
-    margin-right: 0;
+  @media (min-width: 1254px) {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
   }
 }
-.navigation__link{
-color: #0b0c11;
-text-decoration: none;
-text-transform: uppercase;
-font-size: 9px;
-font-weight: 700;
-line-height: 1; // line height такой же высоты как размер шрифта
-letter-spacing: 5.58px;
+
+.navigation__item {
+  text-align: center;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.navigation__link {
+  color: #0b0c11;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1; // line height такой же высоты как размер шрифта
+  letter-spacing: 5.58px;
 }
